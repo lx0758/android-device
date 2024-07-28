@@ -1,0 +1,23 @@
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_arm64.mk)
+
+PRODUCT_NAME := orangepi_3b
+PRODUCT_DEVICE := orangepi_3b
+PRODUCT_BRAND := OrangePi
+PRODUCT_MODEL := 3B
+
+# System RO FS Type
+TARGET_RO_FILE_SYSTEM_TYPE ?= erofs
+
+# Dynamic partitions
+PRODUCT_BUILD_SUPER_PARTITION := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
+# PRODUCT_BUILD_BOOT_IMAGE := true
+# PRODUCT_BUILD_RECOVERY_IMAGE := true
+PRODUCT_BUILD_SYSTEM_IMAGE := true
+PRODUCT_BUILD_VENDOR_IMAGE := true
+PRODUCT_BUILD_PRODUCT_IMAGE := true
+PRODUCT_BUILD_CACHE_IMAGE := true
+PRODUCT_BUILD_USERDATA_IMAGE := true
