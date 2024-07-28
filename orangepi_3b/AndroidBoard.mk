@@ -1,0 +1,2 @@
+-include device/6xyun/common/build/BuildParameterTxt.mk
+-include device/6xyun/common/build/BuildDtboImage.mk
